@@ -1,4 +1,4 @@
-from PIL import Image
+from PIL import Image, ImageOps
 '''
 This simple program converts an image to an image made of ascii characters.
 This version is very crude. Some refacturing must be done
@@ -17,6 +17,10 @@ date: 31/01/2023
 imageMap = ("   ", " . ", ". .", "...", ".:.", ":.:", ":::", ":|:", "|:|", "|||", "|#|", "#|#", "###", "#$#", "$#$", "$$$")#map for converting and image to asci. Add as much as you need
 tryAgain = True
 
+#im = Image.open('data/src/lena.jpg')
+#im_invert = ImageOps.invert(im)
+#im_invert.save('data/dst/lena_invert.jpg', quality=95)
+
 ''' Create an object called porn1 and assign all the caracteristics of the real porn file "porn1.jpg" '''
 while(tryAgain):
     imgFile = input("\nEnter the image file name with the extension. (.jpg, .jpeg, .png, etc): ")
@@ -32,12 +36,14 @@ while(tryAgain):
                 downSizer = int(input("We need to downsize the image. Type the Amount: "))
                 BIT = img.resize(tuple(int(t/downSizer) for t in img.size))
                 BIT = BIT.convert("L")
+                BIT = ImageOps.invert(BIT)
                 tryScalingAgain = False
             except:
                 print("Sorry, invalid value typed. Please try again.")
                 tryScalingAgain = True
 
-        print(BIT.size)
+        print(imgFile + " was downscaled to: " + str(BIT.size) + "\n")
+
 
 
         singlePixel = BIT.load() # we load the porn1 object into Pixel, making it a PixelAccess object
