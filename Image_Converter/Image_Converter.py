@@ -46,7 +46,7 @@ while(tryAgain):
 
 
 
-        singlePixel = BIT.load() # we load the porn1 object into Pixel, making it a PixelAccess object
+        singlePixel = BIT.load() # we load the BIT object into Pixel, making it a PixelAccess object
 
         for i in range(BIT.size[1]):# here we generate the image out of chars
             for j in range(BIT.size[0]):
