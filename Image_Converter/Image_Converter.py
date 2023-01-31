@@ -21,7 +21,7 @@ tryAgain = True
 #im_invert = ImageOps.invert(im)
 #im_invert.save('data/dst/lena_invert.jpg', quality=95)
 
-''' Create an object called porn1 and assign all the caracteristics of the real porn file "porn1.jpg" '''
+
 while(tryAgain):
     imgFile = input("\nEnter the image file name with the extension. (.jpg, .jpeg, .png, etc): ")
     try:
