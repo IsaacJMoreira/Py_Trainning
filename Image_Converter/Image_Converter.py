@@ -17,11 +17,6 @@ date: 31/01/2023
 imageMap = ("   ", " . ", ". .", "...", ".:.", ":.:", ":::", ":|:", "|:|", "|||", "|#|", "#|#", "###", "#$#", "$#$", "$$$")#map for converting and image to asci. Add as much as you need
 tryAgain = True
 
-#im = Image.open('data/src/lena.jpg')
-#im_invert = ImageOps.invert(im)
-#im_invert.save('data/dst/lena_invert.jpg', quality=95)
-
-
 while(tryAgain):
     imgFile = input("\nEnter the image file name with the extension. (.jpg, .jpeg, .png, etc): ")
     try:
