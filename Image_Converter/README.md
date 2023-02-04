@@ -1,6 +1,8 @@
 # IMAGE to ASCII converter
 
-#### In order to use this code, you will need to instal the fallowing libraries:
+### To use this programe, you can download the Image_to_ASCII.exe and run it.
+
+#### In order to modify this code, you will need to instal the fallowing libraries:
 * Pillow; and
 * CV2.
 
